@@ -1,0 +1,11 @@
+{
+  "appId": "com.smartpantry.app",
+  "appName": "SmartPantry 3D",
+  "webDir": "out",
+  "server": {
+    "androidScheme": "https"
+  },
+  "ios": {
+    "contentInset": "automatic"
+  }
+}

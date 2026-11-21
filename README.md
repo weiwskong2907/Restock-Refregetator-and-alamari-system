@@ -1,2 +1,34 @@
-# Restock-Refregetator-and-alamari-system
-to let the people have whishlist to buy the things at supermarket 
+# SmartPantry 3D (全龄段 3D 家庭冰箱与橱柜库存比价助手)
+
+一个高颜值、跨平台（桌面 Web + Android/iOS PWA + Capacitor 静态导出友好）的 3D 家庭冰箱与橱柜库存比价助手。
+
+## 核心亮点
+
+1. **自选 5 种真实冰箱型号 + 实时 3D 重构**
+   - 内置 **双门上冷冻（Panasonic/Sharp）**、**双门下冷冻（Samsung/LG）**、**对开门**、**法式多门**、**迷你单门** 5 款预设结构。
+   - 切换型号时，Three.js 场景外型、门板铰链开启方式、滑轨冷冻抽屉与内部隔层实时重构，原有物品按语义位置自动重映射。
+   - 支持 **我的 3D 冰箱** 与 **3D 厨房橱柜** 一键切换，支持关门 / 开门 / 透明透视，点击隔层与右侧列表双向联动（点击列表物品时 3D 镜头平滑聚焦并闪烁高亮隔层）。
+
+2. **4 种全龄段专属交互模式**
+   - **长辈模式**：暖米白 `#FAF9F6` + 深炭黑 `#111827` + AAA 对比度深蓝 `#1D4ED8`，大字排版、`≥64px` 按钮，顶部超大「按住说话」语音找物与过期播报，所有删除带大按钮二次确认。
+   - **童趣模式**：奶油黄 `#FFFDF0` + 阳光黄 `#FACC15` + 天空蓝 `#38BDF8`，大号 Emoji 卡片、星星积分进度条、点击物品弹出「我拿了一个 / 我放回去了」大按钮与彩带庆祝动画；隐藏删除与价格，退出童趣模式需答对乘法家长锁。
+   - **学生模式**：浅灰白 `#F8FAFC` + 靛蓝 `#4F46E5` + 省钱霓虹绿 `#10B981`，等宽数字价格对齐，Bento 卡片突出「本月比价已省金额」与「临期食材快手菜」，支持手机端列表左滑一键消耗 (`-1`)。
+   - **管家模式**：专业冷灰 `#F3F4F6` + 深青 `#0F766E` / 商务蓝 `#2563EB`，高密度 KPI 看板、分类筛选、多选批量入库，以及一键复制采购清单分享到家庭群。
+
+3. **极简防呆入库与多渠道比价**
+   - 支持一键常见食材预设、后置摄像头拍照/扫码 (`capture="environment"`)、语音录入。
+   - 消耗 (`-1`) 或删除物品后底部弹出 3 秒 **撤销 (Undo)** 提示条防误操作。
+   - 内置 **99 Speedmart / Lotus's / AEON / Shopee** 模拟比价卡片，高亮 **「全网最低价」** 并汇总节省金额。
+
+4. **Android & iOS PWA / Capacitor 深度适配**
+   - 已配置 `public/manifest.json`、图标及 iOS `apple-mobile-web-app` Meta。
+   - 支持 `100dvh`、`env(safe-area-inset-top/bottom)`、移动端底部固定导航栏、`overscroll-behavior: none`、单指旋转/双指缩放阻尼控制及 `dpr={[1, 2]}` 性能保护。
+   - 已开启 `output: 'export'` 静态导出（产物输出至 `out/`），可直接对接 Capacitor 打包为 Android `.apk` / iOS `.ipa`。
+
+## 本地运行与构建
+
+```bash
+npm install
+npm run dev       # 本地开发 http://localhost:3000
+npm run build     # 生产构建并输出静态目录 out/
+```

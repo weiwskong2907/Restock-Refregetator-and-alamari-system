@@ -1,0 +1,24 @@
+{
+  "name": "SmartPantry 3D · 全龄段家庭冰箱与橱柜助手",
+  "short_name": "SmartPantry 3D",
+  "description": "3D 交互式家庭冰箱与橱柜库存管理、全龄段专属模式与多渠道超市比价助手",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f3f4f6",
+  "theme_color": "#0f766e",
+  "icons": [
+    {
+      "src": "/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
